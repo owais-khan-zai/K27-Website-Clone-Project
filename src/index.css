@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: font300;
+  src: url("./assets/fonts/Lausanne-300.woff2");
+}
+@font-face {
+  font-family: font500;
+  src: url("./assets/fonts/Lausanne-500.woff2");
+}
+
+body{
+  font-family: font300;
+}
+
+:root{
+  --white-color: white;
+  --black-color: black;
+  --green-color: #D3FD50;
+}
+
+.menuItems::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-51%, 0, 0); 
+  }
+}
+
+.animate-marquee {
+  animation: marquee 4s linear infinite; 
+  will-change: transform; 
+  display: flex;
+}
+
+
+
+/* nichy sy dusra animation ka code start ho rha hy  */
+
+/* Infinite Text Scroll Animations with Seamless Loop */
+
+/* Left scrolling animation */
+@keyframes scrollLeftContinuous {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* half shift only */
+  }
+}
+
+/* Right scrolling animation */
+@keyframes scrollRightContinuous {
+  0% {
+    transform: translateX(-50%); /* start from half */
+  }
+  100% {
+    transform: translateX(0%); /* come back to start */
+  }
+}
+
+/* Container styles */
+.scroll-container-left {
+  display: flex;
+  animation: scrollLeftContinuous 4s linear infinite;
+  will-change: transform;
+  width: 200%; /* double for seamless */
+}
+
+.scroll-container-right {
+  display: flex;
+  animation: scrollRightContinuous 4s linear infinite;
+  will-change: transform;
+  width: 200%;
+}
+
+/* Individual text items */
+.scroll-text-left,
+.scroll-text-right {
+  flex-shrink: 0;
+  width: 50%; /* each takes half */
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.scroll-text-left {
+  justify-content: flex-start;
+  padding-right: 2rem;
+}
+
+.scroll-text-right {
+  justify-content: flex-end;  
+  padding-left: 2rem;
+  padding-right: 2rem;       
+}
+
