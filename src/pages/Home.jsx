@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react'
-import video from '../assets/video/main-video.mp4'
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion";
 
@@ -8,7 +7,7 @@ const Home = () => {
 
   return (
     <div className='w-full min-h-full   relative '>
-        <video src={video} className='w-full h-full object-cover absolute top-0 left-0' loop autoPlay muted playsInline/>
+        <video src="https://res.cloudinary.com/dx48q3i5w/video/upload/v1763405127/main-video_q25ndy.mp4" className='w-full h-full object-cover absolute top-0 left-0' loop autoPlay muted playsInline/>
 
       <div className='w-full h-full relative z-10 flex  items-end md:items-start '>
 
@@ -53,7 +52,7 @@ const Home = () => {
                             ease: "easeInOut"
                         }}
                         className=' relative flex gap-2 justify-center items-center  leading-none'>
-                            <h1 className='leading-none '>WHO</h1><div className='bg-white w-[25vw]  sm:w-[9rem] md:w-[10rem] md:h-20 lg:w-[12rem] xl:w-[13rem] xl:h-24  lg:h-24 h-15 rounded-full overflow-hidden'><video src={video} className='h-full w-full object-cover ' autoPlay muted loop/></div>
+                            <h1 className='leading-none '>WHO</h1><div className='bg-white w-[25vw]  sm:w-[9rem] md:w-[10rem] md:h-20 lg:w-[12rem] xl:w-[13rem] xl:h-24  lg:h-24 h-15 rounded-full overflow-hidden'><video src="https://res.cloudinary.com/dx48q3i5w/video/upload/v1763405127/main-video_q25ndy.mp4" className='h-full w-full object-cover ' autoPlay muted loop/></div>
                         </motion.div>
                     </div>
                     <div className='overflow-hidden'>
